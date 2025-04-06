@@ -1,0 +1,5 @@
+{
+    "terminal.integrated.env.windows": {
+        "PATH": "${env:PATH};C:\\msys64\\ucrt64\bin;C:\\Program Files\\OpenSSL-Win64\\bin"
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build server",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-o",
+                "server.exe",
+                "server.c",
+                "-I\"C:\\Program Files\\OpenSSL-Win64\\include\"",
+                "-L\"C:\\Program Files\\OpenSSL-Win64\\lib\"",
+                "-lssl",
+                "-lcrypto",
+                "-lws2_32"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build client",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-g",
+                "-o",
+                "client.exe",
+                "client.c",
+                "-I\"C:\\Program Files\\OpenSSL-Win64\\include\"",
+                "-L\"C:\\Program Files\\OpenSSL-Win64\\lib\"",
+                "-lssl",
+                "-lcrypto",
+                "-lws2_32"
+            ]
+        }
+    ]
+}
